@@ -9,11 +9,11 @@ const {
     // addReaction,
     // removeReaction,
   } = require('../../controller/thoughController');
-const { create } = require('../../models/Though');
+
 
   // /api/though
-  router.route('/').get(getThoughs);
-  router.route('/:userId').post(createThough);
+  router.route('/').get(getThoughs).post(createThough);
+  // router.route('/:userId').post(createThough);
   
 
   router.route('/:thoughId').get(getThoughId).delete(deleteThough);
@@ -29,4 +29,4 @@ const { create } = require('../../models/Though');
 
 
 //  router.route('/:thoughId/reactions/:reactionId').delete('removeReaction');
-//   module.exports = router;
+  module.exports = router;
